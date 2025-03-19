@@ -1,0 +1,28 @@
+
+{{ if eq .Params.Copyright "BY-NC-SA" }}
+    <p style="text-align: right; margin: 40px 0 0; font-weight: bolder;" 
+    xmlns:cc="http://creativecommons.org/ns#" >遵循
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"
+        >CC BY-NC-SA 4.0
+            <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+            <img style="height:22px!important;margin-left:-4px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+            <img style="height:22px!important;margin-left:-4px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+            <img style="height:22px!important;margin-left:-4px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+        </a>
+    </p>
+{{ else if eq .Params.Copyright "BY-NC-ND" }}
+    <p style="text-align: right; margin: 40px 0 0; font-weight: bolder;" 
+    xmlns:cc="http://creativecommons.org/ns#" >遵循
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;"
+        >CC BY-NC-ND 4.0
+            <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+            <img style="height:22px!important;margin-left:-4px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+            <img style="height:22px!important;margin-left:-4px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+            <img style="height:22px!important;margin-left:-4px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="">
+        </a>
+    </p>
+{{ else if eq .Params.Copyright "All-Rights-Reserved" }}
+    <p style="text-align: right; margin: 40px 0 0; font-weight: bolder;"
+    >保留所有权利 All Rights Reserved
+    </p>
+{{ end }}

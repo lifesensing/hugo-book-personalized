@@ -25,3 +25,27 @@
 {{ with $script.Content }}
   <script>{{ . | safeJS }}</script>
 {{ end }}
+
+<div>
+  <footer>  
+  <style>
+    .full-width-line {
+      width: 144%; /* 横线横贯整个页面 */
+      border: 0; /* 移除默认边框 */
+      height: 1px; /* 设置线的高度 */
+      background: #000000; /* 设置线的颜色 */
+      margin: auto; /* 上下自动间距居中 */
+    }
+  </style>
+  <hr class="full-width-line">
+  <p>© {{ now.Format "2006" }} Powered By Hugo. Theme: Hugo-book</p> 
+  </footer>  
+</div>
+
+<br>
+{{$scratch := newScratch}}
+{{ range (where .Site.Pages "Kind" "page" )}}
+	{{$scratch.Add "total" .WordCount}}
+{{ end }}
+本书共{{ $scratch.Get "total"}}字
+<br>

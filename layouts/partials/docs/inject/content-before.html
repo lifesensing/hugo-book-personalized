@@ -1,0 +1,10 @@
+<!--从原有的标题文件中提取题目和时间-->
+<h1 style="margin: 10px;">
+    <a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a>
+  </h1>
+{{ partial "docs/post-meta" . }}
+
+<!--对判断自数不为0的文章进行计数，包括标点，关于公式的计数涉及其它原理-->
+{{if ne  .WordCount  0 }}
+  <span class="post-word-count"; style="margin:0px 0px 10px 0px;display: block;">此页 {{ .WordCount }} 字</span>
+{{ end }}

@@ -1,8 +1,11 @@
-{{ with .Date }}
-  <div class="flex align-center text-small book-post-date">
-    <img src="{{ "svg/calendar.svg" | relURL }}" class="book-icon " alt="" />
-    <span>{{ partial "docs/date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}</span>
-  </div>
+<!--增加对于showthedate值的判断，为true时才执行原有进程-->
+{{ if .Params.showthedate | default "true" }}
+  {{with .Date}}
+    <div class="flex align-center text-small book-post-date">
+      <img src="{{ "svg/sundial.svg" | relURL }}" class="book-icon " alt="" width="20px"/>
+      <span>{{ partial "docs/date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}</span>
+    </div>
+  {{ end }}
 {{ end }}
 
 {{ range $taxonomy, $_ := .Site.Taxonomies }}
