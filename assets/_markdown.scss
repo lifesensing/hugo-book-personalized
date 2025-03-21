@@ -67,12 +67,12 @@
     max-width: 100%;
     height: auto;
   }
-
+//插入代码的设置
   code {
     direction: ltr;
     unicode-bidi: embed;
     padding: 0 $padding-4;
-    background: var(--gray-200);
+    background: rgba(92, 219, 230, 0.902);
     border-radius: $border-radius;
     font-size: 0.875em;
   }
